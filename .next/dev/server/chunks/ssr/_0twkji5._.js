@@ -11,7 +11,6 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chart$2d$column$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__BarChart3$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/chart-column.mjs [app-ssr] (ecmascript) <export default as BarChart3>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$bell$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Bell$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/bell.mjs [app-ssr] (ecmascript) <export default as Bell>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$left$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronLeft$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/chevron-left.mjs [app-ssr] (ecmascript) <export default as ChevronLeft>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/chevron-right.mjs [app-ssr] (ecmascript) <export default as ChevronRight>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$question$2d$mark$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__CircleHelp$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/circle-question-mark.mjs [app-ssr] (ecmascript) <export default as CircleHelp>");
@@ -25,7 +24,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$settings$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Settings$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/settings.mjs [app-ssr] (ecmascript) <export default as Settings>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shield$2d$check$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ShieldCheck$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/shield-check.mjs [app-ssr] (ecmascript) <export default as ShieldCheck>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sliders$2d$horizontal$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__SlidersHorizontal$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/sliders-horizontal.mjs [app-ssr] (ecmascript) <export default as SlidersHorizontal>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sparkles$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Sparkles$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/sparkles.mjs [app-ssr] (ecmascript) <export default as Sparkles>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$tag$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Tag$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/tag.mjs [app-ssr] (ecmascript) <export default as Tag>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/trash.mjs [app-ssr] (ecmascript) <export default as Trash2>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$users$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Users$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/users.mjs [app-ssr] (ecmascript) <export default as Users>");
@@ -256,56 +254,6 @@ function DomainDirectory() {
                         fileName: "[project]/components/domain-directory.tsx",
                         lineNumber: 169,
                         columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "mt-auto rounded-xl border border-[#1c3554] bg-[#0d2139] p-4",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sparkles$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Sparkles$3e$__["Sparkles"], {
-                                className: "size-4 text-[#6b8cff]"
-                            }, void 0, false, {
-                                fileName: "[project]/components/domain-directory.tsx",
-                                lineNumber: 177,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "mt-3 text-xs font-semibold text-white",
-                                children: "Keep growing"
-                            }, void 0, false, {
-                                fileName: "[project]/components/domain-directory.tsx",
-                                lineNumber: 178,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "mt-2 text-[11px] leading-4 text-[#8096b2]",
-                                children: "A single source of truth for every domain you operate."
-                            }, void 0, false, {
-                                fileName: "[project]/components/domain-directory.tsx",
-                                lineNumber: 179,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                onClick: ()=>setAdding(true),
-                                className: "mt-4 flex h-8 w-full items-center justify-center gap-1 rounded-md bg-[#315cf3] text-[11px] font-semibold text-white transition hover:bg-[#416bff] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8ea6ff]",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Plus$3e$__["Plus"], {
-                                        className: "size-3"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/domain-directory.tsx",
-                                        lineNumber: 180,
-                                        columnNumber: 286
-                                    }, this),
-                                    " Add domain"
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/components/domain-directory.tsx",
-                                lineNumber: 180,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/components/domain-directory.tsx",
-                        lineNumber: 176,
-                        columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
@@ -326,7 +274,7 @@ function DomainDirectory() {
                                     children: "S"
                                 }, void 0, false, {
                                     fileName: "[project]/components/domain-directory.tsx",
-                                    lineNumber: 186,
+                                    lineNumber: 180,
                                     columnNumber: 67
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -334,7 +282,7 @@ function DomainDirectory() {
                                     children: "SEO-TEAM"
                                 }, void 0, false, {
                                     fileName: "[project]/components/domain-directory.tsx",
-                                    lineNumber: 186,
+                                    lineNumber: 180,
                                     columnNumber: 163
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -342,13 +290,13 @@ function DomainDirectory() {
                                     children: "Operations"
                                 }, void 0, false, {
                                     fileName: "[project]/components/domain-directory.tsx",
-                                    lineNumber: 186,
+                                    lineNumber: 180,
                                     columnNumber: 217
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/domain-directory.tsx",
-                            lineNumber: 186,
+                            lineNumber: 180,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
@@ -361,7 +309,7 @@ function DomainDirectory() {
                                             children: "Operations"
                                         }, void 0, false, {
                                             fileName: "[project]/components/domain-directory.tsx",
-                                            lineNumber: 189,
+                                            lineNumber: 183,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -369,69 +317,44 @@ function DomainDirectory() {
                                             children: "Domain Directory"
                                         }, void 0, false, {
                                             fileName: "[project]/components/domain-directory.tsx",
-                                            lineNumber: 190,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "mt-2 text-sm text-[#8297b3]",
-                                            children: "A single source of truth for every domain your team owns and operates."
-                                        }, void 0, false, {
-                                            fileName: "[project]/components/domain-directory.tsx",
-                                            lineNumber: 191,
+                                            lineNumber: 184,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/domain-directory.tsx",
-                                    lineNumber: 188,
+                                    lineNumber: 182,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "flex items-center gap-3",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                            "aria-label": "Notifications",
-                                            className: "hidden size-10 place-items-center rounded-lg border border-[#20354f] bg-[#0d1b2d] text-[#91a5c1] transition hover:border-[#36547a] hover:text-white sm:grid",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$bell$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Bell$3e$__["Bell"], {
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        onClick: ()=>setAdding(true),
+                                        className: "inline-flex h-10 items-center gap-2 rounded-lg bg-[#3964f4] px-4 text-sm font-semibold text-white shadow-[0_8px_20px_rgba(49,92,243,0.2)] transition hover:bg-[#4b73ff] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9bb0ff]",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Plus$3e$__["Plus"], {
                                                 className: "size-4"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/domain-directory.tsx",
-                                                lineNumber: 194,
-                                                columnNumber: 218
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "[project]/components/domain-directory.tsx",
-                                            lineNumber: 194,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                            onClick: ()=>setAdding(true),
-                                            className: "inline-flex h-10 items-center gap-2 rounded-lg bg-[#3964f4] px-4 text-sm font-semibold text-white shadow-[0_8px_20px_rgba(49,92,243,0.2)] transition hover:bg-[#4b73ff] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9bb0ff]",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Plus$3e$__["Plus"], {
-                                                    className: "size-4"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/components/domain-directory.tsx",
-                                                    lineNumber: 195,
-                                                    columnNumber: 312
-                                                }, this),
-                                                " Add domain"
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/components/domain-directory.tsx",
-                                            lineNumber: 195,
-                                            columnNumber: 15
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
+                                                lineNumber: 187,
+                                                columnNumber: 312
+                                            }, this),
+                                            " Add domain"
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/components/domain-directory.tsx",
+                                        lineNumber: 187,
+                                        columnNumber: 15
+                                    }, this)
+                                }, void 0, false, {
                                     fileName: "[project]/components/domain-directory.tsx",
-                                    lineNumber: 193,
+                                    lineNumber: 186,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/domain-directory.tsx",
-                            lineNumber: 187,
+                            lineNumber: 181,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -446,7 +369,7 @@ function DomainDirectory() {
                                     loading: loading
                                 }, void 0, false, {
                                     fileName: "[project]/components/domain-directory.tsx",
-                                    lineNumber: 200,
+                                    lineNumber: 192,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(SummaryCard, {
@@ -457,7 +380,7 @@ function DomainDirectory() {
                                     loading: loading
                                 }, void 0, false, {
                                     fileName: "[project]/components/domain-directory.tsx",
-                                    lineNumber: 201,
+                                    lineNumber: 193,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(SummaryCard, {
@@ -468,7 +391,7 @@ function DomainDirectory() {
                                     loading: loading
                                 }, void 0, false, {
                                     fileName: "[project]/components/domain-directory.tsx",
-                                    lineNumber: 202,
+                                    lineNumber: 194,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(SummaryCard, {
@@ -479,13 +402,13 @@ function DomainDirectory() {
                                     loading: loading
                                 }, void 0, false, {
                                     fileName: "[project]/components/domain-directory.tsx",
-                                    lineNumber: 203,
+                                    lineNumber: 195,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/domain-directory.tsx",
-                            lineNumber: 199,
+                            lineNumber: 191,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -515,18 +438,18 @@ function DomainDirectory() {
                                                                     children: formatCount(domains.filter((domain)=>item === 'All' || domain.owner === item).length)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/domain-directory.tsx",
-                                                                    lineNumber: 210,
+                                                                    lineNumber: 202,
                                                                     columnNumber: 242
                                                                 }, this)
                                                             ]
                                                         }, item, true, {
                                                             fileName: "[project]/components/domain-directory.tsx",
-                                                            lineNumber: 210,
+                                                            lineNumber: 202,
                                                             columnNumber: 80
                                                         }, this))
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/domain-directory.tsx",
-                                                    lineNumber: 209,
+                                                    lineNumber: 201,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -536,14 +459,14 @@ function DomainDirectory() {
                                                             className: "size-3.5"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/domain-directory.tsx",
-                                                            lineNumber: 212,
+                                                            lineNumber: 204,
                                                             columnNumber: 81
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             children: "View"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/domain-directory.tsx",
-                                                            lineNumber: 212,
+                                                            lineNumber: 204,
                                                             columnNumber: 123
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -559,24 +482,24 @@ function DomainDirectory() {
                                                                     ]
                                                                 }, option, true, {
                                                                     fileName: "[project]/components/domain-directory.tsx",
-                                                                    lineNumber: 212,
+                                                                    lineNumber: 204,
                                                                     columnNumber: 418
                                                                 }, this))
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/domain-directory.tsx",
-                                                            lineNumber: 212,
+                                                            lineNumber: 204,
                                                             columnNumber: 140
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/domain-directory.tsx",
-                                                    lineNumber: 212,
+                                                    lineNumber: 204,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/domain-directory.tsx",
-                                            lineNumber: 208,
+                                            lineNumber: 200,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -594,24 +517,24 @@ function DomainDirectory() {
                                                             children: formatCount(count)
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/domain-directory.tsx",
-                                                            lineNumber: 215,
+                                                            lineNumber: 207,
                                                             columnNumber: 332
                                                         }, this)
                                                     ]
                                                 }, item, true, {
                                                     fileName: "[project]/components/domain-directory.tsx",
-                                                    lineNumber: 215,
+                                                    lineNumber: 207,
                                                     columnNumber: 56
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/components/domain-directory.tsx",
-                                            lineNumber: 214,
+                                            lineNumber: 206,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/domain-directory.tsx",
-                                    lineNumber: 207,
+                                    lineNumber: 199,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -623,7 +546,7 @@ function DomainDirectory() {
                                                 className: "pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-[#6f87a5]"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/domain-directory.tsx",
-                                                lineNumber: 220,
+                                                lineNumber: 212,
                                                 columnNumber: 50
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -632,7 +555,7 @@ function DomainDirectory() {
                                                 children: "Search domains"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/domain-directory.tsx",
-                                                lineNumber: 220,
+                                                lineNumber: 212,
                                                 columnNumber: 155
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -643,7 +566,7 @@ function DomainDirectory() {
                                                 className: "h-10 w-full rounded-lg border border-[#263d59] bg-[#0a1727] pl-10 pr-10 text-sm text-white outline-none placeholder:text-[#627995] transition focus:border-[#5f80e9] focus:ring-2 focus:ring-[#315cf3]/20"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/domain-directory.tsx",
-                                                lineNumber: 220,
+                                                lineNumber: 212,
                                                 columnNumber: 228
                                             }, this),
                                             query && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -654,23 +577,23 @@ function DomainDirectory() {
                                                     className: "size-4"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/domain-directory.tsx",
-                                                    lineNumber: 220,
+                                                    lineNumber: 212,
                                                     columnNumber: 726
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/domain-directory.tsx",
-                                                lineNumber: 220,
+                                                lineNumber: 212,
                                                 columnNumber: 577
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/domain-directory.tsx",
-                                        lineNumber: 220,
+                                        lineNumber: 212,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/domain-directory.tsx",
-                                    lineNumber: 219,
+                                    lineNumber: 211,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -690,20 +613,20 @@ function DomainDirectory() {
                                                                     children: "Select"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/domain-directory.tsx",
-                                                                    lineNumber: 225,
+                                                                    lineNumber: 217,
                                                                     columnNumber: 179
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                     className: "block size-3 rounded border border-[#58708e]"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/domain-directory.tsx",
-                                                                    lineNumber: 225,
+                                                                    lineNumber: 217,
                                                                     columnNumber: 218
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/components/domain-directory.tsx",
-                                                            lineNumber: 225,
+                                                            lineNumber: 217,
                                                             columnNumber: 148
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -711,7 +634,7 @@ function DomainDirectory() {
                                                             children: "Domain"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/domain-directory.tsx",
-                                                            lineNumber: 225,
+                                                            lineNumber: 217,
                                                             columnNumber: 288
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -719,7 +642,7 @@ function DomainDirectory() {
                                                             children: "Owner"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/domain-directory.tsx",
-                                                            lineNumber: 225,
+                                                            lineNumber: 217,
                                                             columnNumber: 325
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -727,7 +650,7 @@ function DomainDirectory() {
                                                             children: "Segment"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/domain-directory.tsx",
-                                                            lineNumber: 225,
+                                                            lineNumber: 217,
                                                             columnNumber: 361
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -735,7 +658,7 @@ function DomainDirectory() {
                                                             children: "Registry / Source"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/domain-directory.tsx",
-                                                            lineNumber: 225,
+                                                            lineNumber: 217,
                                                             columnNumber: 399
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -743,18 +666,18 @@ function DomainDirectory() {
                                                             children: "Actions"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/domain-directory.tsx",
-                                                            lineNumber: 225,
+                                                            lineNumber: 217,
                                                             columnNumber: 447
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/domain-directory.tsx",
-                                                    lineNumber: 225,
+                                                    lineNumber: 217,
                                                     columnNumber: 24
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/domain-directory.tsx",
-                                                lineNumber: 225,
+                                                lineNumber: 217,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -765,12 +688,12 @@ function DomainDirectory() {
                                                         children: "Loading domains..."
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/domain-directory.tsx",
-                                                        lineNumber: 226,
+                                                        lineNumber: 218,
                                                         columnNumber: 39
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/domain-directory.tsx",
-                                                    lineNumber: 226,
+                                                    lineNumber: 218,
                                                     columnNumber: 35
                                                 }, this) : error ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -782,12 +705,12 @@ function DomainDirectory() {
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/domain-directory.tsx",
-                                                        lineNumber: 226,
+                                                        lineNumber: 218,
                                                         columnNumber: 156
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/domain-directory.tsx",
-                                                    lineNumber: 226,
+                                                    lineNumber: 218,
                                                     columnNumber: 152
                                                 }, this) : pageDomains.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -796,12 +719,12 @@ function DomainDirectory() {
                                                         children: "No domains match the current search and filters."
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/domain-directory.tsx",
-                                                        lineNumber: 226,
+                                                        lineNumber: 218,
                                                         columnNumber: 305
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/domain-directory.tsx",
-                                                    lineNumber: 226,
+                                                    lineNumber: 218,
                                                     columnNumber: 301
                                                 }, this) : pageDomains.map((domain)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
                                                         className: "border-b border-[#172a40] transition hover:bg-[#102239]",
@@ -812,12 +735,12 @@ function DomainDirectory() {
                                                                     className: "block size-3 rounded border border-[#45617f]"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/domain-directory.tsx",
-                                                                    lineNumber: 227,
+                                                                    lineNumber: 219,
                                                                     columnNumber: 47
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/domain-directory.tsx",
-                                                                lineNumber: 227,
+                                                                lineNumber: 219,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -827,12 +750,12 @@ function DomainDirectory() {
                                                                     children: domain.name
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/domain-directory.tsx",
-                                                                    lineNumber: 228,
+                                                                    lineNumber: 220,
                                                                     columnNumber: 47
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/domain-directory.tsx",
-                                                                lineNumber: 228,
+                                                                lineNumber: 220,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -842,12 +765,12 @@ function DomainDirectory() {
                                                                     children: domain.owner
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/domain-directory.tsx",
-                                                                    lineNumber: 229,
+                                                                    lineNumber: 221,
                                                                     columnNumber: 47
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/domain-directory.tsx",
-                                                                lineNumber: 229,
+                                                                lineNumber: 221,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -860,19 +783,19 @@ function DomainDirectory() {
                                                                             children: domain.segment.charAt(0)
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/components/domain-directory.tsx",
-                                                                            lineNumber: 230,
+                                                                            lineNumber: 222,
                                                                             columnNumber: 119
                                                                         }, this),
                                                                         domain.segment
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/components/domain-directory.tsx",
-                                                                    lineNumber: 230,
+                                                                    lineNumber: 222,
                                                                     columnNumber: 47
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/domain-directory.tsx",
-                                                                lineNumber: 230,
+                                                                lineNumber: 222,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -882,12 +805,12 @@ function DomainDirectory() {
                                                                     children: domain.tld
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/domain-directory.tsx",
-                                                                    lineNumber: 231,
+                                                                    lineNumber: 223,
                                                                     columnNumber: 47
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/domain-directory.tsx",
-                                                                lineNumber: 231,
+                                                                lineNumber: 223,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -903,12 +826,12 @@ function DomainDirectory() {
                                                                             className: "size-4"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/components/domain-directory.tsx",
-                                                                            lineNumber: 232,
+                                                                            lineNumber: 224,
                                                                             columnNumber: 401
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/domain-directory.tsx",
-                                                                        lineNumber: 232,
+                                                                        lineNumber: 224,
                                                                         columnNumber: 84
                                                                     }, this),
                                                                     openMenu === domain.id && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -924,14 +847,14 @@ function DomainDirectory() {
                                                                                 children: [
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(PencilIcon, {}, void 0, false, {
                                                                                         fileName: "[project]/components/domain-directory.tsx",
-                                                                                        lineNumber: 232,
+                                                                                        lineNumber: 224,
                                                                                         columnNumber: 798
                                                                                     }, this),
                                                                                     " Edit"
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/components/domain-directory.tsx",
-                                                                                lineNumber: 232,
+                                                                                lineNumber: 224,
                                                                                 columnNumber: 597
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -945,48 +868,48 @@ function DomainDirectory() {
                                                                                         className: "size-3.5"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/components/domain-directory.tsx",
-                                                                                        lineNumber: 232,
+                                                                                        lineNumber: 224,
                                                                                         columnNumber: 1005
                                                                                     }, this),
                                                                                     " Remove"
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/components/domain-directory.tsx",
-                                                                                lineNumber: 232,
+                                                                                lineNumber: 224,
                                                                                 columnNumber: 826
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/components/domain-directory.tsx",
-                                                                        lineNumber: 232,
+                                                                        lineNumber: 224,
                                                                         columnNumber: 474
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/domain-directory.tsx",
-                                                                lineNumber: 232,
+                                                                lineNumber: 224,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, domain.id, true, {
                                                         fileName: "[project]/components/domain-directory.tsx",
-                                                        lineNumber: 226,
+                                                        lineNumber: 218,
                                                         columnNumber: 468
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/components/domain-directory.tsx",
-                                                lineNumber: 226,
+                                                lineNumber: 218,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/domain-directory.tsx",
-                                        lineNumber: 224,
+                                        lineNumber: 216,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/domain-directory.tsx",
-                                    lineNumber: 223,
+                                    lineNumber: 215,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1004,7 +927,7 @@ function DomainDirectory() {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/domain-directory.tsx",
-                                            lineNumber: 237,
+                                            lineNumber: 229,
                                             columnNumber: 130
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1019,12 +942,12 @@ function DomainDirectory() {
                                                         className: "size-4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/domain-directory.tsx",
-                                                        lineNumber: 237,
+                                                        lineNumber: 229,
                                                         columnNumber: 535
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/domain-directory.tsx",
-                                                    lineNumber: 237,
+                                                    lineNumber: 229,
                                                     columnNumber: 267
                                                 }, this),
                                                 pageNumbers.map((number, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1035,7 +958,7 @@ function DomainDirectory() {
                                                                 children: "..."
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/domain-directory.tsx",
-                                                                lineNumber: 237,
+                                                                lineNumber: 229,
                                                                 columnNumber: 718
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1046,13 +969,13 @@ function DomainDirectory() {
                                                                 children: number
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/domain-directory.tsx",
-                                                                lineNumber: 237,
+                                                                lineNumber: 229,
                                                                 columnNumber: 767
                                                             }, this)
                                                         ]
                                                     }, number, true, {
                                                         fileName: "[project]/components/domain-directory.tsx",
-                                                        lineNumber: 237,
+                                                        lineNumber: 229,
                                                         columnNumber: 614
                                                     }, this)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1064,30 +987,30 @@ function DomainDirectory() {
                                                         className: "size-4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/domain-directory.tsx",
-                                                        lineNumber: 237,
+                                                        lineNumber: 229,
                                                         columnNumber: 1426
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/domain-directory.tsx",
-                                                    lineNumber: 237,
+                                                    lineNumber: 229,
                                                     columnNumber: 1144
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/domain-directory.tsx",
-                                            lineNumber: 237,
+                                            lineNumber: 229,
                                             columnNumber: 226
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/domain-directory.tsx",
-                                    lineNumber: 237,
+                                    lineNumber: 229,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/domain-directory.tsx",
-                            lineNumber: 206,
+                            lineNumber: 198,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
@@ -1097,7 +1020,7 @@ function DomainDirectory() {
                                     children: "Shared directory · Supabase is the source of truth."
                                 }, void 0, false, {
                                     fileName: "[project]/components/domain-directory.tsx",
-                                    lineNumber: 239,
+                                    lineNumber: 231,
                                     columnNumber: 131
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1107,31 +1030,31 @@ function DomainDirectory() {
                                             className: "size-3.5"
                                         }, void 0, false, {
                                             fileName: "[project]/components/domain-directory.tsx",
-                                            lineNumber: 239,
+                                            lineNumber: 231,
                                             columnNumber: 246
                                         }, this),
                                         " Internal operations"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/domain-directory.tsx",
-                                    lineNumber: 239,
+                                    lineNumber: 231,
                                     columnNumber: 195
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/domain-directory.tsx",
-                            lineNumber: 239,
+                            lineNumber: 231,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/domain-directory.tsx",
-                    lineNumber: 185,
+                    lineNumber: 179,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/domain-directory.tsx",
-                lineNumber: 184,
+                lineNumber: 178,
                 columnNumber: 7
             }, this),
             adding && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Dialog, {
@@ -1143,7 +1066,7 @@ function DomainDirectory() {
                         children: "Add a domain to the local directory view."
                     }, void 0, false, {
                         fileName: "[project]/components/domain-directory.tsx",
-                        lineNumber: 243,
+                        lineNumber: 235,
                         columnNumber: 78
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -1152,7 +1075,7 @@ function DomainDirectory() {
                         children: "Domain name"
                     }, void 0, false, {
                         fileName: "[project]/components/domain-directory.tsx",
-                        lineNumber: 243,
+                        lineNumber: 235,
                         columnNumber: 161
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1165,7 +1088,7 @@ function DomainDirectory() {
                         className: "mt-2 h-10 w-full rounded-lg border border-[#2b4665] bg-[#0a1727] px-3 font-mono text-sm text-white outline-none focus:border-[#6689ff]"
                     }, void 0, false, {
                         fileName: "[project]/components/domain-directory.tsx",
-                        lineNumber: 243,
+                        lineNumber: 235,
                         columnNumber: 268
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(DialogActions, {
@@ -1174,13 +1097,13 @@ function DomainDirectory() {
                         confirmLabel: "Add domain"
                     }, void 0, false, {
                         fileName: "[project]/components/domain-directory.tsx",
-                        lineNumber: 243,
+                        lineNumber: 235,
                         columnNumber: 609
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/domain-directory.tsx",
-                lineNumber: 243,
+                lineNumber: 235,
                 columnNumber: 18
             }, this),
             editingDomain && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Dialog, {
@@ -1192,7 +1115,7 @@ function DomainDirectory() {
                         children: "Update the domain name in the current directory view."
                     }, void 0, false, {
                         fileName: "[project]/components/domain-directory.tsx",
-                        lineNumber: 244,
+                        lineNumber: 236,
                         columnNumber: 92
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -1201,7 +1124,7 @@ function DomainDirectory() {
                         children: "Domain name"
                     }, void 0, false, {
                         fileName: "[project]/components/domain-directory.tsx",
-                        lineNumber: 244,
+                        lineNumber: 236,
                         columnNumber: 187
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1213,7 +1136,7 @@ function DomainDirectory() {
                         className: "mt-2 h-10 w-full rounded-lg border border-[#2b4665] bg-[#0a1727] px-3 font-mono text-sm text-white outline-none focus:border-[#6689ff]"
                     }, void 0, false, {
                         fileName: "[project]/components/domain-directory.tsx",
-                        lineNumber: 244,
+                        lineNumber: 236,
                         columnNumber: 295
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(DialogActions, {
@@ -1222,13 +1145,13 @@ function DomainDirectory() {
                         confirmLabel: "Save changes"
                     }, void 0, false, {
                         fileName: "[project]/components/domain-directory.tsx",
-                        lineNumber: 244,
+                        lineNumber: 236,
                         columnNumber: 602
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/domain-directory.tsx",
-                lineNumber: 244,
+                lineNumber: 236,
                 columnNumber: 25
             }, this),
             removingDomain && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Dialog, {
@@ -1244,14 +1167,14 @@ function DomainDirectory() {
                                 children: removingDomain.name
                             }, void 0, false, {
                                 fileName: "[project]/components/domain-directory.tsx",
-                                lineNumber: 245,
+                                lineNumber: 237,
                                 columnNumber: 151
                             }, this),
                             " from the current directory view?"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/domain-directory.tsx",
-                        lineNumber: 245,
+                        lineNumber: 237,
                         columnNumber: 96
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(DialogActions, {
@@ -1261,13 +1184,13 @@ function DomainDirectory() {
                         destructive: true
                     }, void 0, false, {
                         fileName: "[project]/components/domain-directory.tsx",
-                        lineNumber: 245,
+                        lineNumber: 237,
                         columnNumber: 259
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/domain-directory.tsx",
-                lineNumber: 245,
+                lineNumber: 237,
                 columnNumber: 26
             }, this)
         ]
@@ -1286,14 +1209,14 @@ function SidebarItem({ icon: Icon, label, active = false }) {
                 className: "size-4"
             }, void 0, false, {
                 fileName: "[project]/components/domain-directory.tsx",
-                lineNumber: 251,
+                lineNumber: 243,
                 columnNumber: 239
             }, this),
             label
         ]
     }, void 0, true, {
         fileName: "[project]/components/domain-directory.tsx",
-        lineNumber: 251,
+        lineNumber: 243,
         columnNumber: 10
     }, this);
 }
@@ -1309,33 +1232,23 @@ function SummaryCard({ icon: Icon, label, value, tone, loading }) {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "flex items-center justify-between",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "grid size-8 place-items-center rounded-full bg-current/15",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Icon, {
-                            className: "size-4"
-                        }, void 0, false, {
-                            fileName: "[project]/components/domain-directory.tsx",
-                            lineNumber: 256,
-                            columnNumber: 193
-                        }, this)
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                    className: "grid size-8 place-items-center rounded-full bg-current/15",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Icon, {
+                        className: "size-4"
                     }, void 0, false, {
                         fileName: "[project]/components/domain-directory.tsx",
-                        lineNumber: 256,
-                        columnNumber: 117
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "text-[10px] uppercase tracking-[0.14em] text-[#7892ad]",
-                        children: "Live"
-                    }, void 0, false, {
-                        fileName: "[project]/components/domain-directory.tsx",
-                        lineNumber: 256,
-                        columnNumber: 227
+                        lineNumber: 248,
+                        columnNumber: 193
                     }, this)
-                ]
-            }, void 0, true, {
+                }, void 0, false, {
+                    fileName: "[project]/components/domain-directory.tsx",
+                    lineNumber: 248,
+                    columnNumber: 117
+                }, this)
+            }, void 0, false, {
                 fileName: "[project]/components/domain-directory.tsx",
-                lineNumber: 256,
+                lineNumber: 248,
                 columnNumber: 66
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1343,21 +1256,21 @@ function SummaryCard({ icon: Icon, label, value, tone, loading }) {
                 children: loading ? '...' : formatCount(value)
             }, void 0, false, {
                 fileName: "[project]/components/domain-directory.tsx",
-                lineNumber: 256,
-                columnNumber: 317
+                lineNumber: 248,
+                columnNumber: 233
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "mt-1 text-xs text-[#9aacc1]",
                 children: label
             }, void 0, false, {
                 fileName: "[project]/components/domain-directory.tsx",
-                lineNumber: 256,
-                columnNumber: 427
+                lineNumber: 248,
+                columnNumber: 343
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/domain-directory.tsx",
-        lineNumber: 256,
+        lineNumber: 248,
         columnNumber: 10
     }, this);
 }
@@ -1370,14 +1283,14 @@ function FilterButton({ children, active, onClick, icon: Icon }) {
                 className: "size-3.5"
             }, void 0, false, {
                 fileName: "[project]/components/domain-directory.tsx",
-                lineNumber: 260,
+                lineNumber: 252,
                 columnNumber: 288
             }, this),
             children
         ]
     }, void 0, true, {
         fileName: "[project]/components/domain-directory.tsx",
-        lineNumber: 260,
+        lineNumber: 252,
         columnNumber: 10
     }, this);
 }
@@ -1398,7 +1311,7 @@ function PencilIcon() {
         children: "✎"
     }, void 0, false, {
         fileName: "[project]/components/domain-directory.tsx",
-        lineNumber: 269,
+        lineNumber: 261,
         columnNumber: 10
     }, this);
 }
@@ -1420,7 +1333,7 @@ function Dialog({ title, children, onClose }) {
                             children: title
                         }, void 0, false, {
                             fileName: "[project]/components/domain-directory.tsx",
-                            lineNumber: 273,
+                            lineNumber: 265,
                             columnNumber: 317
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1431,30 +1344,30 @@ function Dialog({ title, children, onClose }) {
                                 className: "size-4"
                             }, void 0, false, {
                                 fileName: "[project]/components/domain-directory.tsx",
-                                lineNumber: 273,
+                                lineNumber: 265,
                                 columnNumber: 526
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/domain-directory.tsx",
-                            lineNumber: 273,
+                            lineNumber: 265,
                             columnNumber: 396
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/domain-directory.tsx",
-                    lineNumber: 273,
+                    lineNumber: 265,
                     columnNumber: 266
                 }, this),
                 children
             ]
         }, void 0, true, {
             fileName: "[project]/components/domain-directory.tsx",
-            lineNumber: 273,
+            lineNumber: 265,
             columnNumber: 170
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/domain-directory.tsx",
-        lineNumber: 273,
+        lineNumber: 265,
         columnNumber: 10
     }, this);
 }
@@ -1468,7 +1381,7 @@ function DialogActions({ onCancel, onConfirm, confirmLabel, destructive = false 
                 children: "Cancel"
             }, void 0, false, {
                 fileName: "[project]/components/domain-directory.tsx",
-                lineNumber: 277,
+                lineNumber: 269,
                 columnNumber: 55
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1477,13 +1390,13 @@ function DialogActions({ onCancel, onConfirm, confirmLabel, destructive = false 
                 children: confirmLabel
             }, void 0, false, {
                 fileName: "[project]/components/domain-directory.tsx",
-                lineNumber: 277,
+                lineNumber: 269,
                 columnNumber: 208
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/domain-directory.tsx",
-        lineNumber: 277,
+        lineNumber: 269,
         columnNumber: 10
     }, this);
 }

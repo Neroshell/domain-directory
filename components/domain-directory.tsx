@@ -173,12 +173,6 @@ export function DomainDirectory() {
           <SidebarItem icon={Users} label="Team" />
           <SidebarItem icon={Settings} label="Settings" />
         </nav>
-        <div className="mt-auto rounded-xl border border-[#1c3554] bg-[#0d2139] p-4">
-          <Sparkles className="size-4 text-[#6b8cff]" />
-          <p className="mt-3 text-xs font-semibold text-white">Keep growing</p>
-          <p className="mt-2 text-[11px] leading-4 text-[#8096b2]">A single source of truth for every domain you operate.</p>
-          <button onClick={() => setAdding(true)} className="mt-4 flex h-8 w-full items-center justify-center gap-1 rounded-md bg-[#315cf3] text-[11px] font-semibold text-white transition hover:bg-[#416bff] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8ea6ff]"><Plus className="size-3" /> Add domain</button>
-        </div>
       </aside>
 
       <main className="min-h-screen lg:pl-[224px]">
@@ -188,10 +182,8 @@ export function DomainDirectory() {
             <div>
               <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#6d84a3]">Operations</p>
               <h1 className="mt-2 text-3xl font-semibold tracking-[-0.04em] text-white sm:text-[38px]">Domain Directory</h1>
-              <p className="mt-2 text-sm text-[#8297b3]">A single source of truth for every domain your team owns and operates.</p>
             </div>
             <div className="flex items-center gap-3">
-              <button aria-label="Notifications" className="hidden size-10 place-items-center rounded-lg border border-[#20354f] bg-[#0d1b2d] text-[#91a5c1] transition hover:border-[#36547a] hover:text-white sm:grid"><Bell className="size-4" /></button>
               <button onClick={() => setAdding(true)} className="inline-flex h-10 items-center gap-2 rounded-lg bg-[#3964f4] px-4 text-sm font-semibold text-white shadow-[0_8px_20px_rgba(49,92,243,0.2)] transition hover:bg-[#4b73ff] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9bb0ff]"><Plus className="size-4" /> Add domain</button>
             </div>
           </header>
@@ -253,7 +245,7 @@ function SidebarItem({ icon: Icon, label, active = false }: { icon: typeof Globe
 
 function SummaryCard({ icon: Icon, label, value, tone, loading }: { icon: typeof Database; label: string; value: number; tone: 'blue' | 'indigo' | 'orange' | 'teal'; loading: boolean }) {
   const tones = { blue: 'border-[#16485a] bg-[#0d2935] text-[#4cc7db]', indigo: 'border-[#273e78] bg-[#121e3b] text-[#718aff]', orange: 'border-[#5a3e2b] bg-[#241c1b] text-[#e78b35]', teal: 'border-[#15505a] bg-[#0e2930] text-[#31c4bd]' }
-  return <div className={`rounded-xl border p-4 ${tones[tone]}`}><div className="flex items-center justify-between"><span className="grid size-8 place-items-center rounded-full bg-current/15"><Icon className="size-4" /></span><span className="text-[10px] uppercase tracking-[0.14em] text-[#7892ad]">Live</span></div><div className="mt-3 font-mono text-2xl font-semibold text-white">{loading ? '...' : formatCount(value)}</div><div className="mt-1 text-xs text-[#9aacc1]">{label}</div></div>
+  return <div className={`rounded-xl border p-4 ${tones[tone]}`}><div className="flex items-center justify-between"><span className="grid size-8 place-items-center rounded-full bg-current/15"><Icon className="size-4" /></span></div><div className="mt-3 font-mono text-2xl font-semibold text-white">{loading ? '...' : formatCount(value)}</div><div className="mt-1 text-xs text-[#9aacc1]">{label}</div></div>
 }
 
 function FilterButton({ children, active, onClick, icon: Icon }: { children: React.ReactNode; active: boolean; onClick: () => void; icon: typeof Layers3 }) {
