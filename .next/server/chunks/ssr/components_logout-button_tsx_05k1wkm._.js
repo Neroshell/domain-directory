@@ -1,0 +1,3 @@
+module.exports=[89130,a=>{"use strict";var b=a.i(87924),c=a.i(50944),d=a.i(69240);a.s(["default",0,function(){let a=(0,c.useRouter)();async function e(){let{error:b}=await d.supabase.auth.signOut();b||a.push("/login")}return(0,b.jsx)("button",{type:"button",onClick:e,className:"mt-6 inline-flex w-full items-center justify-center rounded-lg border border-[#294563] bg-[#12263d] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#16314f]",children:"Sign out"})}])}];
+
+//# sourceMappingURL=components_logout-button_tsx_05k1wkm._.js.map

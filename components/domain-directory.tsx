@@ -23,6 +23,8 @@ import {
   Users,
   X,
 } from 'lucide-react'
+import CsvImportDialog from '@/components/csv-import-dialog'
+import type { ManagedDomain } from '@/lib/csv-import'
 import { publicSupabase, supabase } from '@/lib/supabase/client'
 
 export type Domain = {
@@ -67,42 +69,45 @@ export function DomainDirectory() {
   const [newOwner, setNewOwner] = useState('Our team')
   const [newSegment, setNewSegment] = useState('Unassigned')
   const [newSource, setNewSource] = useState('internal')
+  const [importing, setImporting] = useState(false)
 
-  useEffect(() => {
-    async function loadDomains() {
-      const records: SupabaseDomain[] = []
-      let offset = 0
+  async function loadDomains() {
+    setLoading(true)
+    setError(null)
+    const records: SupabaseDomain[] = []
+    let offset = 0
 
-      while (true) {
-        const { data, error: requestError } = await publicSupabase
-          .from('domains')
-          .select('*')
-          .order('domain', { ascending: true })
-          .range(offset, offset + domainBatchSize - 1)
+    while (true) {
+      const { data, error: requestError } = await publicSupabase
+        .from('domains')
+        .select('*')
+        .order('domain', { ascending: true })
+        .range(offset, offset + domainBatchSize - 1)
 
-        if (requestError) {
-          setError(requestError.message)
-          setLoading(false)
-          return
-        }
-
-        const batch = (data ?? []) as SupabaseDomain[]
-        records.push(...batch)
-        if (batch.length < domainBatchSize) break
-        offset += batch.length
+      if (requestError) {
+        setError(requestError.message)
+        setLoading(false)
+        return
       }
 
-      setDomains(records.map((record) => ({
-        id: record.id,
-        name: record.domain,
-        owner: record.manager ?? 'Unassigned',
-        segment: record.brand ?? 'Unassigned',
-        tld: record.source ?? 'Unassigned',
-      })))
-      setLoading(false)
+      const batch = (data ?? []) as SupabaseDomain[]
+      records.push(...batch)
+      if (batch.length < domainBatchSize) break
+      offset += batch.length
     }
 
-    loadDomains()
+    setDomains(records.map((record) => ({
+      id: record.id,
+      name: record.domain,
+      owner: record.manager ?? 'Unassigned',
+      segment: record.brand ?? 'Unassigned',
+      tld: record.source ?? 'Unassigned',
+    })))
+    setLoading(false)
+  }
+
+  useEffect(() => {
+    void loadDomains()
   }, [])
 
   useEffect(() => {
@@ -199,6 +204,7 @@ export function DomainDirectory() {
             </div>
             <div className="flex items-center gap-3">
               <button type="button" onClick={handleSignOut} className="inline-flex h-10 items-center rounded-lg border border-[#294563] bg-[#0f2135] px-3 text-sm font-medium text-[#dce6f5] transition hover:bg-[#152d47]">Log out</button>
+              <button type="button" onClick={() => setImporting(true)} className="inline-flex h-10 items-center gap-2 rounded-lg border border-[#3c5d9a] bg-[#102753] px-4 text-sm font-semibold text-[#c9d7ff] transition hover:bg-[#173568] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9bb0ff]"><UploadIcon /> Import CSV</button>
               <button onClick={() => setAdding(true)} className="inline-flex h-10 items-center gap-2 rounded-lg bg-[#3964f4] px-4 text-sm font-semibold text-white shadow-[0_8px_20px_rgba(49,92,243,0.2)] transition hover:bg-[#4b73ff] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9bb0ff]"><Plus className="size-4" /> Add domain</button>
             </div>
           </header>
@@ -247,6 +253,7 @@ export function DomainDirectory() {
         </div>
       </main>
 
+      {importing && <CsvImportDialog existing={domains.map((domain): ManagedDomain => ({ id: domain.id, domain: domain.name, brand: domain.segment === 'Unassigned' ? null : domain.segment, manager: domain.owner === 'Unassigned' ? null : domain.owner, source: domain.tld === 'Unassigned' ? null : domain.tld }))} onClose={() => setImporting(false)} onImported={loadDomains} />}
       {adding && <Dialog title="Add domain" onClose={() => setAdding(false)}><p className="text-sm text-[#8197b4]">Add a domain to the local directory view.</p><div className="mt-5 grid gap-4 sm:grid-cols-2"><FieldLabel label="Domain name" htmlFor="new-domain" className="sm:col-span-2"><input id="new-domain" autoFocus value={newDomain} onChange={(event) => setNewDomain(event.target.value)} onKeyDown={(event) => event.key === 'Enter' && addDomain()} placeholder="example.com" className="mt-2 h-10 w-full rounded-lg border border-[#2b4665] bg-[#0a1727] px-3 font-mono text-sm text-white outline-none focus:border-[#6689ff]" /></FieldLabel><FieldLabel label="Owner" htmlFor="new-owner"><select id="new-owner" value={newOwner} onChange={(event) => setNewOwner(event.target.value)} className="mt-2 h-10 w-full rounded-lg border border-[#2b4665] bg-[#0a1727] px-3 text-sm text-white outline-none focus:border-[#6689ff]"><option>Our team</option><option>Aphex Media</option></select></FieldLabel><FieldLabel label="Segment" htmlFor="new-segment"><select id="new-segment" value={newSegment} onChange={(event) => setNewSegment(event.target.value)} className="mt-2 h-10 w-full rounded-lg border border-[#2b4665] bg-[#0a1727] px-3 text-sm text-white outline-none focus:border-[#6689ff]"><option>Unassigned</option><option>Betoffice</option><option>Betpipo</option><option>Galabet</option><option>Hitbet</option><option>Padişahbet</option><option>Vippark</option></select></FieldLabel><FieldLabel label="Registry / source" htmlFor="new-source" className="sm:col-span-2"><input id="new-source" value={newSource} onChange={(event) => setNewSource(event.target.value)} placeholder="internal" className="mt-2 h-10 w-full rounded-lg border border-[#2b4665] bg-[#0a1727] px-3 font-mono text-sm text-white outline-none focus:border-[#6689ff]" /></FieldLabel></div><DialogActions onCancel={() => setAdding(false)} onConfirm={addDomain} confirmLabel="Add domain" /></Dialog>}
       {editingDomain && <Dialog title="Edit domain" onClose={() => setEditingDomain(null)}><p className="text-sm text-[#8197b4]">Update the domain name in the current directory view.</p><label className="mt-5 block text-xs font-semibold text-[#b8c9dc]" htmlFor="edit-domain">Domain name</label><input id="edit-domain" autoFocus value={draft} onChange={(event) => setDraft(event.target.value)} onKeyDown={(event) => event.key === 'Enter' && saveEdit()} className="mt-2 h-10 w-full rounded-lg border border-[#2b4665] bg-[#0a1727] px-3 font-mono text-sm text-white outline-none focus:border-[#6689ff]" /><DialogActions onCancel={() => setEditingDomain(null)} onConfirm={saveEdit} confirmLabel="Save changes" /></Dialog>}
       {removingDomain && <Dialog title="Remove domain" onClose={() => setRemovingDomain(null)}><p className="text-sm leading-6 text-[#8197b4]">Remove <span className="font-mono text-[#dce6f5]">{removingDomain.name}</span> from the current directory view?</p><DialogActions onCancel={() => setRemovingDomain(null)} onConfirm={removeDomain} confirmLabel="Remove" destructive /></Dialog>}
@@ -274,6 +281,10 @@ function segmentColor(segment: string) {
 
 function PencilIcon() {
   return <span className="size-3.5 text-center text-[11px]">✎</span>
+}
+
+function UploadIcon() {
+  return <span className="text-sm">↑</span>
 }
 
 function Dialog({ title, children, onClose }: { title: string; children: React.ReactNode; onClose: () => void }) {

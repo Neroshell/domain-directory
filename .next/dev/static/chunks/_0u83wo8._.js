@@ -195,7 +195,8 @@ const publicSupabase = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_
     auth: {
         persistSession: false,
         autoRefreshToken: false,
-        detectSessionInUrl: false
+        detectSessionInUrl: false,
+        storageKey: 'domain-directory-public-read-only'
     }
 });
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {

@@ -15,6 +15,7 @@
       --tw-skew-x: initial;
       --tw-skew-y: initial;
       --tw-space-y-reverse: 0;
+      --tw-divide-y-reverse: 0;
       --tw-border-style: solid;
       --tw-leading: initial;
       --tw-font-weight: initial;
@@ -82,6 +83,7 @@
     --spacing: .25rem;
     --container-md: 28rem;
     --container-xl: 36rem;
+    --container-4xl: 56rem;
     --text-xs: .75rem;
     --text-xs--line-height: calc(1 / .75);
     --text-sm: .875rem;
@@ -90,6 +92,8 @@
     --text-base--line-height: calc(1.5 / 1);
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
@@ -376,6 +380,10 @@
     pointer-events: none;
   }
 
+  .visible {
+    visibility: visible;
+  }
+
   .sr-only {
     clip-path: inset(50%);
     white-space: nowrap;
@@ -448,6 +456,10 @@
     margin-inline: auto;
   }
 
+  .my-8 {
+    margin-block: calc(var(--spacing) * 8);
+  }
+
   .mt-1 {
     margin-top: var(--spacing);
   }
@@ -476,8 +488,16 @@
     margin-top: calc(var(--spacing) * 7);
   }
 
+  .mt-8 {
+    margin-top: calc(var(--spacing) * 8);
+  }
+
   .mt-10 {
     margin-top: calc(var(--spacing) * 10);
+  }
+
+  .mb-4 {
+    margin-bottom: calc(var(--spacing) * 4);
   }
 
   .mb-6 {
@@ -518,6 +538,10 @@
 
   .inline-flex {
     display: inline-flex;
+  }
+
+  .table {
+    display: table;
   }
 
   .size-3 {
@@ -565,6 +589,11 @@
     height: calc(var(--spacing) * 10);
   }
 
+  .size-12 {
+    width: calc(var(--spacing) * 12);
+    height: calc(var(--spacing) * 12);
+  }
+
   .h-6 {
     height: calc(var(--spacing) * 6);
   }
@@ -583,6 +612,14 @@
 
   .h-10 {
     height: calc(var(--spacing) * 10);
+  }
+
+  .max-h-80 {
+    max-height: calc(var(--spacing) * 80);
+  }
+
+  .min-h-48 {
+    min-height: calc(var(--spacing) * 48);
   }
 
   .min-h-screen {
@@ -607,6 +644,10 @@
 
   .w-full {
     width: 100%;
+  }
+
+  .max-w-4xl {
+    max-width: var(--container-4xl);
   }
 
   .max-w-\[1440px\] {
@@ -646,6 +687,10 @@
     cursor: not-allowed;
   }
 
+  .cursor-pointer {
+    cursor: pointer;
+  }
+
   .flex-col {
     flex-direction: column;
   }
@@ -660,6 +705,10 @@
 
   .items-center {
     align-items: center;
+  }
+
+  .items-start {
+    align-items: flex-start;
   }
 
   .justify-between {
@@ -704,8 +753,24 @@
     margin-block-end: calc(var(--spacing) * calc(1 - var(--tw-space-y-reverse)));
   }
 
+  :where(.divide-y > :not(:last-child)) {
+    --tw-divide-y-reverse: 0;
+    border-bottom-style: var(--tw-border-style);
+    border-top-style: var(--tw-border-style);
+    border-top-width: calc(1px * var(--tw-divide-y-reverse));
+    border-bottom-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
+  }
+
+  :where(.divide-\[\#1b2c43\] > :not(:last-child)) {
+    border-color: #1b2c43;
+  }
+
   .overflow-x-auto {
     overflow-x: auto;
+  }
+
+  .overflow-y-auto {
+    overflow-y: auto;
   }
 
   .rounded {
@@ -755,6 +820,11 @@
     border-bottom-width: 1px;
   }
 
+  .border-dashed {
+    --tw-border-style: dashed;
+    border-style: dashed;
+  }
+
   .border-\[\#1b2c43\] {
     border-color: #1b2c43;
   }
@@ -767,6 +837,14 @@
     border-color: #1c3048;
   }
 
+  .border-\[\#1d3550\] {
+    border-color: #1d3550;
+  }
+
+  .border-\[\#2a3d57\] {
+    border-color: #2a3d57;
+  }
+
   .border-\[\#2a4564\] {
     border-color: #2a4564;
   }
@@ -775,12 +853,20 @@
     border-color: #2b4665;
   }
 
+  .border-\[\#3c5d9a\] {
+    border-color: #3c5d9a;
+  }
+
   .border-\[\#5a3e2b\] {
     border-color: #5a3e2b;
   }
 
   .border-\[\#5c2b39\] {
     border-color: #5c2b39;
+  }
+
+  .border-\[\#83a0ff\] {
+    border-color: #83a0ff;
   }
 
   .border-\[\#172a40\] {
@@ -803,6 +889,10 @@
     border-color: #273e78;
   }
 
+  .border-\[\#294d8a\] {
+    border-color: #294d8a;
+  }
+
   .border-\[\#688cff\] {
     border-color: #688cff;
   }
@@ -821,6 +911,10 @@
 
   .border-\[\#16485a\] {
     border-color: #16485a;
+  }
+
+  .border-\[\#23604f\] {
+    border-color: #23604f;
   }
 
   .border-\[\#29415d\] {
@@ -843,6 +937,14 @@
     border-color: #294563;
   }
 
+  .border-\[\#355374\] {
+    border-color: #355374;
+  }
+
+  .border-\[\#633744\] {
+    border-color: #633744;
+  }
+
   .border-border {
     border-color: var(--border);
   }
@@ -857,6 +959,10 @@
 
   .bg-\[\#0c1a2b\] {
     background-color: #0c1a2b;
+  }
+
+  .bg-\[\#0d1b2d\] {
+    background-color: #0d1b2d;
   }
 
   .bg-\[\#0d1d31\] {
@@ -891,6 +997,10 @@
     background-color: #2a1a22;
   }
 
+  .bg-\[\#2d1a22\] {
+    background-color: #2d1a22;
+  }
+
   .bg-\[\#2e62c2\] {
     background-color: #2e62c2;
   }
@@ -911,6 +1021,14 @@
     background-color: #123c72;
   }
 
+  .bg-\[\#142c59\] {
+    background-color: #142c59;
+  }
+
+  .bg-\[\#172e5b\] {
+    background-color: #172e5b;
+  }
+
   .bg-\[\#203e86\] {
     background-color: #203e86;
   }
@@ -921,6 +1039,10 @@
 
   .bg-\[\#285bd1\] {
     background-color: #285bd1;
+  }
+
+  .bg-\[\#321d27\] {
+    background-color: #321d27;
   }
 
   .bg-\[\#2648a8\] {
@@ -947,9 +1069,18 @@
     background-color: #12263d;
   }
 
+  .bg-\[\#12382f\] {
+    background-color: #12382f;
+  }
+
   .bg-\[\#020914\]\/75 {
     background-color: #020914bf;
     background-color: lab(2.27403% -.443533 -6.02478 / .75);
+  }
+
+  .bg-\[\#020914\]\/80 {
+    background-color: #020914cc;
+    background-color: lab(2.27403% -.443533 -6.02478 / .8);
   }
 
   .bg-\[\#091727\] {
@@ -958,6 +1089,10 @@
 
   .bg-\[\#102239\] {
     background-color: #102239;
+  }
+
+  .bg-\[\#102753\] {
+    background-color: #102753;
   }
 
   .bg-\[\#a83f50\] {
@@ -1018,6 +1153,10 @@
 
   .p-1\.5 {
     padding: calc(var(--spacing) * 1.5);
+  }
+
+  .p-3 {
+    padding: calc(var(--spacing) * 3);
   }
 
   .p-4 {
@@ -1100,6 +1239,10 @@
     padding-right: calc(var(--spacing) * 10);
   }
 
+  .pb-4 {
+    padding-bottom: calc(var(--spacing) * 4);
+  }
+
   .pl-10 {
     padding-left: calc(var(--spacing) * 10);
   }
@@ -1143,6 +1286,11 @@
   .text-sm {
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
+
+  .text-xl {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
   }
 
   .text-xs {
@@ -1226,6 +1374,10 @@
     color: #6f87a5;
   }
 
+  .text-\[\#6f91e9\] {
+    color: #6f91e9;
+  }
+
   .text-\[\#8aa0bd\] {
     color: #8aa0bd;
   }
@@ -1246,8 +1398,24 @@
     color: #9db0c9;
   }
 
+  .text-\[\#9fb4d0\] {
+    color: #9fb4d0;
+  }
+
   .text-\[\#31c4bd\] {
     color: #31c4bd;
+  }
+
+  .text-\[\#55c7a6\] {
+    color: #55c7a6;
+  }
+
+  .text-\[\#65d3ac\] {
+    color: #65d3ac;
+  }
+
+  .text-\[\#83a9ff\] {
+    color: #83a9ff;
   }
 
   .text-\[\#83b6ff\] {
@@ -1310,8 +1478,16 @@
     color: #c4d3e5;
   }
 
+  .text-\[\#c6d5e7\] {
+    color: #c6d5e7;
+  }
+
   .text-\[\#c8d5e7\] {
     color: #c8d5e7;
+  }
+
+  .text-\[\#c9d7ff\] {
+    color: #c9d7ff;
   }
 
   .text-\[\#d9e6f5\] {
@@ -1328,6 +1504,10 @@
 
   .text-\[\#e78b35\] {
     color: #e78b35;
+  }
+
+  .text-\[\#f1b76a\] {
+    color: #f1b76a;
   }
 
   .text-\[\#ff9da5\] {
@@ -1446,8 +1626,16 @@
       border-color: #304d70;
     }
 
+    .hover\:border-\[\#6689ff\]:hover {
+      border-color: #6689ff;
+    }
+
     .hover\:border-\[\#42628b\]:hover {
       border-color: #42628b;
+    }
+
+    .hover\:bg-\[\#0e2138\]:hover {
+      background-color: #0e2138;
     }
 
     .hover\:bg-\[\#1a3553\]:hover {
@@ -1484,6 +1672,10 @@
 
     .hover\:bg-\[\#102239\]:hover {
       background-color: #102239;
+    }
+
+    .hover\:bg-\[\#173568\]:hover {
+      background-color: #173568;
     }
 
     .hover\:bg-\[\#c24c5d\]:hover {
@@ -1700,6 +1892,14 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    .sm\:grid-cols-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .sm\:grid-cols-5 {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
     .sm\:flex-row {
       flex-direction: row;
     }
@@ -1710,6 +1910,10 @@
 
     .sm\:justify-between {
       justify-content: space-between;
+    }
+
+    .sm\:p-6 {
+      padding: calc(var(--spacing) * 6);
     }
 
     .sm\:px-7 {
@@ -2323,6 +2527,12 @@
 }
 
 @property --tw-space-y-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --tw-divide-y-reverse {
   syntax: "*";
   inherits: false;
   initial-value: 0;

@@ -20,6 +20,7 @@ export const publicSupabase = createClient(
       persistSession: false,
       autoRefreshToken: false,
       detectSessionInUrl: false,
+      storageKey: 'domain-directory-public-read-only',
     },
   },
 )
