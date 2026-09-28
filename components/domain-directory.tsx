@@ -25,7 +25,8 @@ import {
 } from 'lucide-react'
 import CsvImportDialog from '@/components/csv-import-dialog'
 import type { ManagedDomain } from '@/lib/csv-import'
-import { publicSupabase, supabase } from '@/lib/supabase/client'
+import { getDirectoryRequestHeaders } from '@/lib/auth/client'
+import { supabase } from '@/lib/supabase/client'
 
 export type Domain = {
   id: number | string
@@ -43,6 +44,8 @@ type SupabaseDomain = {
   source: string | null
 }
 
+type DirectoryProps = { accessType: 'internal' | 'brand' }
+
 const domainBatchSize = 1000
 const pageSizeOptions = [10, 25, 50]
 
@@ -50,7 +53,7 @@ function formatCount(value: number) {
   return value.toLocaleString('en-US')
 }
 
-export function DomainDirectory() {
+export function DomainDirectory({ accessType }: DirectoryProps) {
   const router = useRouter()
   const [domains, setDomains] = useState<Domain[]>([])
   const [loading, setLoading] = useState(true)
@@ -78,19 +81,16 @@ export function DomainDirectory() {
     let offset = 0
 
     while (true) {
-      const { data, error: requestError } = await publicSupabase
-        .from('domains')
-        .select('*')
-        .order('domain', { ascending: true })
-        .range(offset, offset + domainBatchSize - 1)
-
-      if (requestError) {
-        setError(requestError.message)
+      const headers = await getDirectoryRequestHeaders()
+      const response = await fetch(`/api/domains?offset=${offset}&limit=${domainBatchSize}`, { headers, cache: 'no-store' })
+      if (!response.ok) {
+        setError(response.status === 401 || response.status === 403 ? 'Your directory access has expired.' : 'Domain data could not be loaded.')
         setLoading(false)
         return
       }
 
-      const batch = (data ?? []) as SupabaseDomain[]
+      const { domains: data } = await response.json() as { domains: SupabaseDomain[] }
+      const batch = data ?? []
       records.push(...batch)
       if (batch.length < domainBatchSize) break
       offset += batch.length
@@ -150,35 +150,52 @@ export function DomainDirectory() {
   const aphexDomains = domains.filter((domain) => domain.owner === 'Aphex Media').length
   const segments = new Set(domains.map((domain) => domain.segment)).size
 
-  function saveEdit() {
+  async function saveEdit() {
     const value = draft.trim()
     if (!value || !editingDomain) return
-    setDomains((current) => current.map((domain) => domain.id === editingDomain.id ? { ...domain, name: value } : domain))
+    const headers = await getDirectoryRequestHeaders()
+    const response = await fetch('/api/domains', { method: 'PATCH', headers: { ...headers, 'Content-Type': 'application/json' }, body: JSON.stringify({ id: editingDomain.id, domain: value }) })
+    if (!response.ok) {
+      setError('The domain could not be updated. Check your access and try again.')
+      return
+    }
     setEditingDomain(null)
+    await loadDomains()
   }
 
-  function addDomain() {
+  async function addDomain() {
     const value = newDomain.trim()
     if (!value) return
-    setDomains((current) => [{ id: Date.now(), name: value, owner: newOwner, segment: newSegment, tld: newSource.trim() || 'internal' }, ...current])
+    const headers = await getDirectoryRequestHeaders()
+    const response = await fetch('/api/domains', { method: 'POST', headers: { ...headers, 'Content-Type': 'application/json' }, body: JSON.stringify({ domain: value, manager: newOwner, brand: newSegment, source: newSource.trim() || 'internal' }) })
+    if (!response.ok) {
+      setError(response.status === 403 ? 'Only internal users can add domains.' : 'The domain could not be added. It may already exist.')
+      return
+    }
     setNewDomain('')
     setNewOwner('Our team')
     setNewSegment('Unassigned')
     setNewSource('internal')
     setAdding(false)
+    await loadDomains()
   }
 
-  function removeDomain() {
+  async function removeDomain() {
     if (!removingDomain) return
-    setDomains((current) => current.filter((domain) => domain.id !== removingDomain.id))
+    const headers = await getDirectoryRequestHeaders()
+    const response = await fetch('/api/domains', { method: 'DELETE', headers: { ...headers, 'Content-Type': 'application/json' }, body: JSON.stringify({ id: removingDomain.id }) })
+    if (!response.ok) {
+      setError('The domain could not be removed. Check your access and try again.')
+      return
+    }
     setRemovingDomain(null)
+    await loadDomains()
   }
 
   async function handleSignOut() {
-    const { error } = await supabase.auth.signOut()
-    if (!error) {
-      router.push('/login')
-    }
+    if (accessType === 'internal') await supabase.auth.signOut()
+    await fetch('/api/auth/logout', { method: 'POST' })
+    router.replace('/login')
   }
 
   return (
@@ -204,8 +221,7 @@ export function DomainDirectory() {
             </div>
             <div className="flex items-center gap-3">
               <button type="button" onClick={handleSignOut} className="inline-flex h-10 items-center rounded-lg border border-[#294563] bg-[#0f2135] px-3 text-sm font-medium text-[#dce6f5] transition hover:bg-[#152d47]">Log out</button>
-              <button type="button" onClick={() => setImporting(true)} className="inline-flex h-10 items-center gap-2 rounded-lg border border-[#3c5d9a] bg-[#102753] px-4 text-sm font-semibold text-[#c9d7ff] transition hover:bg-[#173568] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9bb0ff]"><UploadIcon /> Import CSV</button>
-              <button onClick={() => setAdding(true)} className="inline-flex h-10 items-center gap-2 rounded-lg bg-[#3964f4] px-4 text-sm font-semibold text-white shadow-[0_8px_20px_rgba(49,92,243,0.2)] transition hover:bg-[#4b73ff] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9bb0ff]"><Plus className="size-4" /> Add domain</button>
+              {accessType === 'internal' && <><button type="button" onClick={() => setImporting(true)} className="inline-flex h-10 items-center gap-2 rounded-lg border border-[#3c5d9a] bg-[#102753] px-4 text-sm font-semibold text-[#c9d7ff] transition hover:bg-[#173568] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9bb0ff]"><UploadIcon /> Import CSV</button><button onClick={() => setAdding(true)} className="inline-flex h-10 items-center gap-2 rounded-lg bg-[#3964f4] px-4 text-sm font-semibold text-white shadow-[0_8px_20px_rgba(49,92,243,0.2)] transition hover:bg-[#4b73ff] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9bb0ff]"><Plus className="size-4" /> Add domain</button></>}
             </div>
           </header>
 
@@ -242,7 +258,7 @@ export function DomainDirectory() {
                   <td className="px-3 py-3.5"><span className={`inline-flex rounded-full px-2.5 py-1 text-[11px] font-semibold ${domain.owner === 'Our team' ? 'bg-[#123c72] text-[#83b6ff]' : 'bg-[#3b2b1e] text-[#e8ad69]'}`}>{domain.owner}</span></td>
                   <td className="px-3 py-3.5"><span className="inline-flex items-center gap-2 text-xs text-[#b5c4d8]"><span className={`grid size-5 place-items-center rounded-full text-[10px] font-bold ${segmentColor(domain.segment)}`}>{domain.segment.charAt(0)}</span>{domain.segment}</span></td>
                   <td className="px-3 py-3.5"><span className="rounded-md border border-[#29415d] bg-[#102239] px-2 py-1 font-mono text-[11px] text-[#9db0c9]">{domain.tld}</span></td>
-                  <td className="relative px-3 py-3.5 text-right" data-domain-menu><button aria-label={`Actions for ${domain.name}`} aria-expanded={openMenu === domain.id} onClick={() => setOpenMenu(openMenu === domain.id ? null : domain.id)} className="rounded-md p-1.5 text-[#7890ad] hover:bg-[#1b3554] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6586f1]"><MoreHorizontal className="size-4" /></button>{openMenu === domain.id && <div className="absolute right-4 top-11 z-10 w-32 rounded-lg border border-[#2a4564] bg-[#102239] p-1 text-left shadow-xl"><button onClick={() => { setEditingDomain(domain); setDraft(domain.name); setOpenMenu(null) }} className="flex w-full items-center gap-2 rounded-md px-3 py-2 text-xs text-[#c4d3e5] hover:bg-[#1a3553]"><PencilIcon /> Edit</button><button onClick={() => { setRemovingDomain(domain); setOpenMenu(null) }} className="flex w-full items-center gap-2 rounded-md px-3 py-2 text-xs text-[#ff9da5] hover:bg-[#3b2029]"><Trash2 className="size-3.5" /> Remove</button></div>}</td>
+                  <td className="relative px-3 py-3.5 text-right" data-domain-menu>{accessType === 'internal' && <><button aria-label={`Actions for ${domain.name}`} aria-expanded={openMenu === domain.id} onClick={() => setOpenMenu(openMenu === domain.id ? null : domain.id)} className="rounded-md p-1.5 text-[#7890ad] hover:bg-[#1b3554] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6586f1]"><MoreHorizontal className="size-4" /></button>{openMenu === domain.id && <div className="absolute right-4 top-11 z-10 w-32 rounded-lg border border-[#2a4564] bg-[#102239] p-1 text-left shadow-xl"><button onClick={() => { setEditingDomain(domain); setDraft(domain.name); setOpenMenu(null) }} className="flex w-full items-center gap-2 rounded-md px-3 py-2 text-xs text-[#c4d3e5] hover:bg-[#1a3553]"><PencilIcon /> Edit</button><button onClick={() => { setRemovingDomain(domain); setOpenMenu(null) }} className="flex w-full items-center gap-2 rounded-md px-3 py-2 text-xs text-[#ff9da5] hover:bg-[#3b2029]"><Trash2 className="size-3.5" /> Remove</button></div>}</>}</td>
                 </tr>)}</tbody>
               </table>
             </div>

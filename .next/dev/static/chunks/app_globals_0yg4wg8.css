@@ -102,6 +102,7 @@
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --tracking-tight: -.025em;
+    --tracking-wider: .05em;
     --radius-md: calc(var(--radius) * .8);
     --blur-sm: 8px;
     --default-transition-duration: .15s;
@@ -456,6 +457,10 @@
     margin-inline: auto;
   }
 
+  .my-5 {
+    margin-block: calc(var(--spacing) * 5);
+  }
+
   .my-8 {
     margin-block: calc(var(--spacing) * 8);
   }
@@ -494,10 +499,6 @@
 
   .mt-10 {
     margin-top: calc(var(--spacing) * 10);
-  }
-
-  .mb-4 {
-    margin-bottom: calc(var(--spacing) * 4);
   }
 
   .mb-6 {
@@ -589,11 +590,6 @@
     height: calc(var(--spacing) * 10);
   }
 
-  .size-12 {
-    width: calc(var(--spacing) * 12);
-    height: calc(var(--spacing) * 12);
-  }
-
   .h-6 {
     height: calc(var(--spacing) * 6);
   }
@@ -612,6 +608,14 @@
 
   .h-10 {
     height: calc(var(--spacing) * 10);
+  }
+
+  .h-11 {
+    height: calc(var(--spacing) * 11);
+  }
+
+  .h-px {
+    height: 1px;
   }
 
   .max-h-80 {
@@ -664,6 +668,10 @@
 
   .min-w-\[760px\] {
     min-width: 760px;
+  }
+
+  .flex-1 {
+    flex: 1;
   }
 
   .shrink-0 {
@@ -763,6 +771,12 @@
 
   :where(.divide-\[\#1b2c43\] > :not(:last-child)) {
     border-color: #1b2c43;
+  }
+
+  .truncate {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
 
   .overflow-x-auto {
@@ -997,10 +1011,6 @@
     background-color: #2a1a22;
   }
 
-  .bg-\[\#2d1a22\] {
-    background-color: #2d1a22;
-  }
-
   .bg-\[\#2e62c2\] {
     background-color: #2e62c2;
   }
@@ -1093,6 +1103,10 @@
 
   .bg-\[\#102753\] {
     background-color: #102753;
+  }
+
+  .bg-\[\#203750\] {
+    background-color: #203750;
   }
 
   .bg-\[\#a83f50\] {
@@ -1350,6 +1364,11 @@
     letter-spacing: var(--tracking-tight);
   }
 
+  .tracking-wider {
+    --tw-tracking: var(--tracking-wider);
+    letter-spacing: var(--tracking-wider);
+  }
+
   .whitespace-nowrap {
     white-space: nowrap;
   }
@@ -1394,6 +1413,10 @@
     color: #9aaec7;
   }
 
+  .text-\[\#9bb0ff\] {
+    color: #9bb0ff;
+  }
+
   .text-\[\#9db0c9\] {
     color: #9db0c9;
   }
@@ -1428,6 +1451,10 @@
 
   .text-\[\#162b5f\] {
     color: #162b5f;
+  }
+
+  .text-\[\#667e9d\] {
+    color: #667e9d;
   }
 
   .text-\[\#718aff\] {

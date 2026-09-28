@@ -41,7 +41,7 @@ export type ImportSummary = {
 }
 
 const supportedHeaders = new Set(['domain', 'brand', 'manager', 'source'])
-const requiredHeaders = ['domain']
+const requiredHeaders = ['domain', 'brand', 'manager', 'source']
 
 export function normalizeDomain(value: string) {
   return value.trim().replace(/^https?:\/\//i, '').replace(/\/+$/, '').toLowerCase()
@@ -90,11 +90,14 @@ export function parseAndClassifyCsv(file: File, existing: ManagedDomain[]): Prom
         const headers = results.meta.fields ?? []
         const unsupportedHeaders = headers.filter((header) => !supportedHeaders.has(header))
         const missingHeaders = requiredHeaders.filter((header) => !headers.includes(header))
-        if (missingHeaders.length || unsupportedHeaders.length || results.errors.length) {
+        const duplicateHeaders = headers.filter((header, index) => headers.indexOf(header) !== index)
+        const firstParseError = results.errors[0]
+        if (missingHeaders.length || unsupportedHeaders.length || duplicateHeaders.length || results.errors.length) {
           const details = [
             missingHeaders.length ? `Missing required column: ${missingHeaders.join(', ')}` : '',
             unsupportedHeaders.length ? `Unsupported column: ${unsupportedHeaders.join(', ')}` : '',
-            results.errors.length ? `CSV parsing error on row ${results.errors[0].row + 2}` : '',
+            duplicateHeaders.length ? `Duplicate column: ${Array.from(new Set(duplicateHeaders)).join(', ')}` : '',
+            firstParseError ? `CSV parsing error on row ${(firstParseError.row ?? 0) + 2}` : '',
           ].filter(Boolean).join('. ')
           reject(new Error(details || 'The CSV structure is invalid.'))
           return
