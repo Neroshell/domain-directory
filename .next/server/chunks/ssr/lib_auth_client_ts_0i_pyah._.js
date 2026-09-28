@@ -1,3 +1,0 @@
-module.exports=[90023,a=>{"use strict";var b=a.i(69240);async function c(){let{data:{session:a}}=await b.supabase.auth.getSession(),c={};return a?.access_token&&(c.Authorization=`Bearer ${a.access_token}`),c}async function d(){try{let a=await c(),b=await fetch("/api/access",{headers:a,cache:"no-store"});if(b.status>=500)return{status:"unavailable"};if(!b.ok)return{status:"denied"};let d=await b.json();return{status:"authorized",accessType:d.accessType,email:d.email}}catch{return{status:"unavailable"}}}a.s(["getDirectoryRequestHeaders",0,c,"requestDirectoryAccess",0,d])}];
-
-//# sourceMappingURL=lib_auth_client_ts_0i_pyah._.js.map

@@ -33,7 +33,6 @@ export type Domain = {
   name: string
   owner: string
   segment: string
-  tld: string
 }
 
 type SupabaseDomain = {
@@ -41,7 +40,6 @@ type SupabaseDomain = {
   domain: string
   brand: string | null
   manager: string | null
-  source: string | null
 }
 
 type DirectoryProps = { accessType: 'internal' | 'brand' }
@@ -71,7 +69,6 @@ export function DomainDirectory({ accessType }: DirectoryProps) {
   const [newDomain, setNewDomain] = useState('')
   const [newOwner, setNewOwner] = useState('Our team')
   const [newSegment, setNewSegment] = useState('Unassigned')
-  const [newSource, setNewSource] = useState('internal')
   const [importing, setImporting] = useState(false)
 
   async function loadDomains() {
@@ -101,7 +98,6 @@ export function DomainDirectory({ accessType }: DirectoryProps) {
       name: record.domain,
       owner: record.manager ?? 'Unassigned',
       segment: record.brand ?? 'Unassigned',
-      tld: record.source ?? 'Unassigned',
     })))
     setLoading(false)
   }
@@ -167,7 +163,7 @@ export function DomainDirectory({ accessType }: DirectoryProps) {
     const value = newDomain.trim()
     if (!value) return
     const headers = await getDirectoryRequestHeaders()
-    const response = await fetch('/api/domains', { method: 'POST', headers: { ...headers, 'Content-Type': 'application/json' }, body: JSON.stringify({ domain: value, manager: newOwner, brand: newSegment, source: newSource.trim() || 'internal' }) })
+    const response = await fetch('/api/domains', { method: 'POST', headers: { ...headers, 'Content-Type': 'application/json' }, body: JSON.stringify({ domain: value, manager: newOwner, brand: newSegment }) })
     if (!response.ok) {
       setError(response.status === 403 ? 'Only internal users can add domains.' : 'The domain could not be added. It may already exist.')
       return
@@ -175,7 +171,6 @@ export function DomainDirectory({ accessType }: DirectoryProps) {
     setNewDomain('')
     setNewOwner('Our team')
     setNewSegment('Unassigned')
-    setNewSource('internal')
     setAdding(false)
     await loadDomains()
   }
@@ -251,13 +246,12 @@ export function DomainDirectory({ accessType }: DirectoryProps) {
 
             <div className="overflow-x-auto">
               <table className="w-full min-w-[760px] border-collapse text-left">
-                <thead><tr className="border-b border-[#1b2c43] bg-[#0e1e32] text-[10px] font-semibold uppercase tracking-[0.16em] text-[#6f86a4]"><th className="w-10 px-5 py-3"><span className="sr-only">Select</span><span className="block size-3 rounded border border-[#58708e]" /></th><th className="px-3 py-3">Domain</th><th className="px-3 py-3">Owner</th><th className="px-3 py-3">Segment</th><th className="px-3 py-3">Registry / Source</th><th className="w-14 px-3 py-3 text-right">Actions</th></tr></thead>
-                <tbody>{loading ? <tr><td colSpan={6} className="px-5 py-16 text-center text-sm text-[#7890ad]">Loading domains...</td></tr> : error ? <tr><td colSpan={6} className="px-5 py-16 text-center text-sm text-[#ff9da5]">Unable to load domains: {error}</td></tr> : pageDomains.length === 0 ? <tr><td colSpan={6} className="px-5 py-16 text-center text-sm text-[#7890ad]">No domains match the current search and filters.</td></tr> : pageDomains.map((domain) => <tr key={domain.id} className="border-b border-[#172a40] transition hover:bg-[#102239]">
+                <thead><tr className="border-b border-[#1b2c43] bg-[#0e1e32] text-[10px] font-semibold uppercase tracking-[0.16em] text-[#6f86a4]"><th className="w-10 px-5 py-3"><span className="sr-only">Select</span><span className="block size-3 rounded border border-[#58708e]" /></th><th className="px-3 py-3">Domain</th><th className="px-3 py-3">Owner</th><th className="px-3 py-3">Segment</th><th className="w-14 px-3 py-3 text-right">Actions</th></tr></thead>
+                <tbody>{loading ? <tr><td colSpan={5} className="px-5 py-16 text-center text-sm text-[#7890ad]">Loading domains...</td></tr> : error ? <tr><td colSpan={5} className="px-5 py-16 text-center text-sm text-[#ff9da5]">Unable to load domains: {error}</td></tr> : pageDomains.length === 0 ? <tr><td colSpan={5} className="px-5 py-16 text-center text-sm text-[#7890ad]">No domains match the current search and filters.</td></tr> : pageDomains.map((domain) => <tr key={domain.id} className="border-b border-[#172a40] transition hover:bg-[#102239]">
                   <td className="px-5 py-3.5"><span className="block size-3 rounded border border-[#45617f]" /></td>
                   <td className="px-3 py-3.5"><span className="font-mono text-sm text-[#d9e6f5]">{domain.name}</span></td>
                   <td className="px-3 py-3.5"><span className={`inline-flex rounded-full px-2.5 py-1 text-[11px] font-semibold ${domain.owner === 'Our team' ? 'bg-[#123c72] text-[#83b6ff]' : 'bg-[#3b2b1e] text-[#e8ad69]'}`}>{domain.owner}</span></td>
                   <td className="px-3 py-3.5"><span className="inline-flex items-center gap-2 text-xs text-[#b5c4d8]"><span className={`grid size-5 place-items-center rounded-full text-[10px] font-bold ${segmentColor(domain.segment)}`}>{domain.segment.charAt(0)}</span>{domain.segment}</span></td>
-                  <td className="px-3 py-3.5"><span className="rounded-md border border-[#29415d] bg-[#102239] px-2 py-1 font-mono text-[11px] text-[#9db0c9]">{domain.tld}</span></td>
                   <td className="relative px-3 py-3.5 text-right" data-domain-menu>{accessType === 'internal' && <><button aria-label={`Actions for ${domain.name}`} aria-expanded={openMenu === domain.id} onClick={() => setOpenMenu(openMenu === domain.id ? null : domain.id)} className="rounded-md p-1.5 text-[#7890ad] hover:bg-[#1b3554] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6586f1]"><MoreHorizontal className="size-4" /></button>{openMenu === domain.id && <div className="absolute right-4 top-11 z-10 w-32 rounded-lg border border-[#2a4564] bg-[#102239] p-1 text-left shadow-xl"><button onClick={() => { setEditingDomain(domain); setDraft(domain.name); setOpenMenu(null) }} className="flex w-full items-center gap-2 rounded-md px-3 py-2 text-xs text-[#c4d3e5] hover:bg-[#1a3553]"><PencilIcon /> Edit</button><button onClick={() => { setRemovingDomain(domain); setOpenMenu(null) }} className="flex w-full items-center gap-2 rounded-md px-3 py-2 text-xs text-[#ff9da5] hover:bg-[#3b2029]"><Trash2 className="size-3.5" /> Remove</button></div>}</>}</td>
                 </tr>)}</tbody>
               </table>
@@ -269,8 +263,8 @@ export function DomainDirectory({ accessType }: DirectoryProps) {
         </div>
       </main>
 
-      {importing && <CsvImportDialog existing={domains.map((domain): ManagedDomain => ({ id: domain.id, domain: domain.name, brand: domain.segment === 'Unassigned' ? null : domain.segment, manager: domain.owner === 'Unassigned' ? null : domain.owner, source: domain.tld === 'Unassigned' ? null : domain.tld }))} onClose={() => setImporting(false)} onImported={loadDomains} />}
-      {adding && <Dialog title="Add domain" onClose={() => setAdding(false)}><p className="text-sm text-[#8197b4]">Add a domain to the local directory view.</p><div className="mt-5 grid gap-4 sm:grid-cols-2"><FieldLabel label="Domain name" htmlFor="new-domain" className="sm:col-span-2"><input id="new-domain" autoFocus value={newDomain} onChange={(event) => setNewDomain(event.target.value)} onKeyDown={(event) => event.key === 'Enter' && addDomain()} placeholder="example.com" className="mt-2 h-10 w-full rounded-lg border border-[#2b4665] bg-[#0a1727] px-3 font-mono text-sm text-white outline-none focus:border-[#6689ff]" /></FieldLabel><FieldLabel label="Owner" htmlFor="new-owner"><select id="new-owner" value={newOwner} onChange={(event) => setNewOwner(event.target.value)} className="mt-2 h-10 w-full rounded-lg border border-[#2b4665] bg-[#0a1727] px-3 text-sm text-white outline-none focus:border-[#6689ff]"><option>Our team</option><option>Aphex Media</option></select></FieldLabel><FieldLabel label="Segment" htmlFor="new-segment"><select id="new-segment" value={newSegment} onChange={(event) => setNewSegment(event.target.value)} className="mt-2 h-10 w-full rounded-lg border border-[#2b4665] bg-[#0a1727] px-3 text-sm text-white outline-none focus:border-[#6689ff]"><option>Unassigned</option><option>Betoffice</option><option>Betpipo</option><option>Galabet</option><option>Hitbet</option><option>Padişahbet</option><option>Vippark</option></select></FieldLabel><FieldLabel label="Registry / source" htmlFor="new-source" className="sm:col-span-2"><input id="new-source" value={newSource} onChange={(event) => setNewSource(event.target.value)} placeholder="internal" className="mt-2 h-10 w-full rounded-lg border border-[#2b4665] bg-[#0a1727] px-3 font-mono text-sm text-white outline-none focus:border-[#6689ff]" /></FieldLabel></div><DialogActions onCancel={() => setAdding(false)} onConfirm={addDomain} confirmLabel="Add domain" /></Dialog>}
+      {importing && <CsvImportDialog existing={domains.map((domain): ManagedDomain => ({ id: domain.id, domain: domain.name, brand: domain.segment === 'Unassigned' ? null : domain.segment, manager: domain.owner === 'Unassigned' ? null : domain.owner }))} onClose={() => setImporting(false)} onImported={loadDomains} />}
+      {adding && <Dialog title="Add domain" onClose={() => setAdding(false)}><p className="text-sm text-[#8197b4]">Add a domain to the local directory view.</p><div className="mt-5 grid gap-4 sm:grid-cols-2"><FieldLabel label="Domain name" htmlFor="new-domain" className="sm:col-span-2"><input id="new-domain" autoFocus value={newDomain} onChange={(event) => setNewDomain(event.target.value)} onKeyDown={(event) => event.key === 'Enter' && addDomain()} placeholder="example.com" className="mt-2 h-10 w-full rounded-lg border border-[#2b4665] bg-[#0a1727] px-3 font-mono text-sm text-white outline-none focus:border-[#6689ff]" /></FieldLabel><FieldLabel label="Owner" htmlFor="new-owner"><select id="new-owner" value={newOwner} onChange={(event) => setNewOwner(event.target.value)} className="mt-2 h-10 w-full rounded-lg border border-[#2b4665] bg-[#0a1727] px-3 text-sm text-white outline-none focus:border-[#6689ff]"><option>Our team</option><option>Aphex Media</option></select></FieldLabel><FieldLabel label="Segment" htmlFor="new-segment"><select id="new-segment" value={newSegment} onChange={(event) => setNewSegment(event.target.value)} className="mt-2 h-10 w-full rounded-lg border border-[#2b4665] bg-[#0a1727] px-3 text-sm text-white outline-none focus:border-[#6689ff]"><option>Unassigned</option><option>Betoffice</option><option>Betpipo</option><option>Galabet</option><option>Hitbet</option><option>Padişahbet</option><option>Vippark</option></select></FieldLabel></div><DialogActions onCancel={() => setAdding(false)} onConfirm={addDomain} confirmLabel="Add domain" /></Dialog>}
       {editingDomain && <Dialog title="Edit domain" onClose={() => setEditingDomain(null)}><p className="text-sm text-[#8197b4]">Update the domain name in the current directory view.</p><label className="mt-5 block text-xs font-semibold text-[#b8c9dc]" htmlFor="edit-domain">Domain name</label><input id="edit-domain" autoFocus value={draft} onChange={(event) => setDraft(event.target.value)} onKeyDown={(event) => event.key === 'Enter' && saveEdit()} className="mt-2 h-10 w-full rounded-lg border border-[#2b4665] bg-[#0a1727] px-3 font-mono text-sm text-white outline-none focus:border-[#6689ff]" /><DialogActions onCancel={() => setEditingDomain(null)} onConfirm={saveEdit} confirmLabel="Save changes" /></Dialog>}
       {removingDomain && <Dialog title="Remove domain" onClose={() => setRemovingDomain(null)}><p className="text-sm leading-6 text-[#8197b4]">Remove <span className="font-mono text-[#dce6f5]">{removingDomain.name}</span> from the current directory view?</p><DialogActions onCancel={() => setRemovingDomain(null)} onConfirm={removeDomain} confirmLabel="Remove" destructive /></Dialog>}
     </div>

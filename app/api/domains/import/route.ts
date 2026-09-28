@@ -4,7 +4,7 @@ import { createSupabaseAdminClient } from '@/lib/supabase/admin'
 
 export const dynamic = 'force-dynamic'
 
-type ImportRow = { domain: string; brand: string | null; manager: string | null; source: string | null }
+type ImportRow = { domain: string; brand: string | null; manager: string | null }
 
 export async function POST(request: Request) {
   if (!isSameOriginRequest(request)) return NextResponse.json({ error: 'Request could not be verified.' }, { status: 403 })
@@ -25,7 +25,7 @@ export async function POST(request: Request) {
       const domain = row.domain.trim().replace(/^https?:\/\//i, '').replace(/\/+$/, '').toLowerCase()
       if (seen.has(domain)) return NextResponse.json({ error: 'The import contains duplicate domains. Review the preview and remove duplicates.' }, { status: 400 })
       seen.add(domain)
-      rows.push({ domain, brand: cleanString(row.brand), manager: cleanString(row.manager), source: cleanString(row.source) })
+      rows.push({ domain, brand: cleanString(row.brand), manager: cleanString(row.manager) })
     }
 
     const { data, error } = await createSupabaseAdminClient().rpc('import_domains', { p_rows: rows })

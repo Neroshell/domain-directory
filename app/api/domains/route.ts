@@ -20,7 +20,7 @@ export async function GET(request: Request) {
     const limit = parseBoundedInteger(url.searchParams.get('limit'), batchSize, 1, batchSize)
     const { data, error } = await createSupabaseAdminClient()
       .from('domains')
-      .select('id, domain, brand, manager, source')
+      .select('id, domain, brand, manager')
       .order('domain')
       .range(offset, offset + limit - 1)
     if (error) return NextResponse.json({ error: 'Domain data could not be loaded.' }, { status: 502, headers: { 'Cache-Control': 'no-store' } })
@@ -34,14 +34,13 @@ export async function POST(request: Request) {
   if (!isSameOriginRequest(request)) return NextResponse.json({ error: 'Request could not be verified.' }, { status: 403 })
   try {
     if (!await requireInternal(request)) return NextResponse.json({ error: 'Internal access is required for this operation.' }, { status: 403 })
-    const body = await request.json() as { domain?: unknown; brand?: unknown; manager?: unknown; source?: unknown }
+    const body = await request.json() as { domain?: unknown; brand?: unknown; manager?: unknown }
     if (typeof body.domain !== 'string' || !isValidDomain(body.domain)) return NextResponse.json({ error: 'Enter a valid domain.' }, { status: 400 })
     const { data, error } = await createSupabaseAdminClient().from('domains').insert({
       domain: normalizeDomain(body.domain),
       brand: cleanNullableString(body.brand),
       manager: cleanNullableString(body.manager),
-      source: cleanNullableString(body.source),
-    }).select('id, domain, brand, manager, source').single()
+    }).select('id, domain, brand, manager').single()
     if (error) return NextResponse.json({ error: 'The domain could not be added. It may already exist.' }, { status: 400 })
     return NextResponse.json({ domain: data }, { status: 201, headers: { 'Cache-Control': 'no-store' } })
   } catch {

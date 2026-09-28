@@ -5,7 +5,6 @@ export type ManagedDomain = {
   domain: string
   brand: string | null
   manager: string | null
-  source: string | null
 }
 
 export type ImportRecord = {
@@ -13,11 +12,10 @@ export type ImportRecord = {
   domain: string
   brand: string | null
   manager: string | null
-  source: string | null
 }
 
 export type ImportChange = {
-  field: 'domain' | 'brand' | 'manager' | 'source'
+  field: 'domain' | 'brand' | 'manager'
   label: string
   from: string
   to: string
@@ -40,8 +38,7 @@ export type ImportSummary = {
   invalidItems: ImportItem[]
 }
 
-const supportedHeaders = new Set(['domain', 'brand', 'manager', 'source'])
-const requiredHeaders = ['domain', 'brand', 'manager', 'source']
+const expectedHeaders = ['domain', 'brand', 'manager']
 
 export function normalizeDomain(value: string) {
   return value.trim().replace(/^https?:\/\//i, '').replace(/\/+$/, '').toLowerCase()
@@ -51,10 +48,6 @@ function isValidDomain(value: string) {
   if (!value || value.length > 253 || /\s|[/?#]/.test(value)) return false
   const labels = value.split('.')
   return labels.length >= 2 && labels.every((label) => label.length > 0 && label.length <= 63 && !label.startsWith('-') && !label.endsWith('-'))
-}
-
-function normalizeHeader(value: string) {
-  return value.replace(/^\uFEFF/, '').trim().toLowerCase()
 }
 
 function normalizeField(value: unknown) {
@@ -68,8 +61,8 @@ function displayValue(value: string | null) {
 
 function compareRecord(record: ImportRecord, existing: ManagedDomain) {
   const changes: ImportChange[] = []
-  const fields: Array<ImportChange['field']> = ['domain', 'brand', 'manager', 'source']
-  const labels: Record<ImportChange['field'], string> = { domain: 'domain', brand: 'brand', manager: 'manager', source: 'source' }
+  const fields: Array<ImportChange['field']> = ['domain', 'brand', 'manager']
+  const labels: Record<ImportChange['field'], string> = { domain: 'domain', brand: 'brand', manager: 'manager' }
 
   for (const field of fields) {
     const current = field === 'domain' ? normalizeDomain(existing.domain) : normalizeField(existing[field])
@@ -85,18 +78,13 @@ export function parseAndClassifyCsv(file: File, existing: ManagedDomain[]): Prom
     Papa.parse<Record<string, unknown>>(file, {
       header: true,
       skipEmptyLines: 'greedy',
-      transformHeader: normalizeHeader,
       complete: (results) => {
         const headers = results.meta.fields ?? []
-        const unsupportedHeaders = headers.filter((header) => !supportedHeaders.has(header))
-        const missingHeaders = requiredHeaders.filter((header) => !headers.includes(header))
-        const duplicateHeaders = headers.filter((header, index) => headers.indexOf(header) !== index)
         const firstParseError = results.errors[0]
-        if (missingHeaders.length || unsupportedHeaders.length || duplicateHeaders.length || results.errors.length) {
+        const headerMismatch = headers.length !== expectedHeaders.length || headers.some((header, index) => header !== expectedHeaders[index])
+        if (headerMismatch || results.errors.length) {
           const details = [
-            missingHeaders.length ? `Missing required column: ${missingHeaders.join(', ')}` : '',
-            unsupportedHeaders.length ? `Unsupported column: ${unsupportedHeaders.join(', ')}` : '',
-            duplicateHeaders.length ? `Duplicate column: ${Array.from(new Set(duplicateHeaders)).join(', ')}` : '',
+            headerMismatch ? 'CSV header must be exactly: domain,brand,manager' : '',
             firstParseError ? `CSV parsing error on row ${(firstParseError.row ?? 0) + 2}` : '',
           ].filter(Boolean).join('. ')
           reject(new Error(details || 'The CSV structure is invalid.'))
@@ -120,7 +108,6 @@ export function parseAndClassifyCsv(file: File, existing: ManagedDomain[]): Prom
             domain,
             brand: normalizeField(row.brand),
             manager: normalizeField(row.manager),
-            source: normalizeField(row.source),
           }
 
           if (!isValidDomain(domain)) {

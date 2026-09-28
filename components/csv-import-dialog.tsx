@@ -63,7 +63,7 @@ export default function CsvImportDialog({ existing, onClose, onImported }: CsvIm
     setError(null)
     setBusy(true)
     try {
-      const rows = summary.items.flatMap((item) => item.record && ['new', 'changed', 'unchanged'].includes(item.status) ? [{ domain: item.record.domain, brand: item.record.brand, manager: item.record.manager, source: item.record.source }] : [])
+      const rows = summary.items.flatMap((item) => item.record && ['new', 'changed', 'unchanged'].includes(item.status) ? [{ domain: item.record.domain, brand: item.record.brand, manager: item.record.manager }] : [])
       const headers = await getDirectoryRequestHeaders()
       const response = await fetch('/api/domains/import', { method: 'POST', headers: { ...headers, 'Content-Type': 'application/json' }, body: JSON.stringify({ rows }), cache: 'no-store' })
       const body = await response.json() as { result?: { added: number; updated: number; unchanged: number }; error?: string }

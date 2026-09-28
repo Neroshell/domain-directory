@@ -84,7 +84,6 @@ declare
   normalized_domain text;
   incoming_brand text;
   incoming_manager text;
-  incoming_source text;
   matched_id public.domains.id%type;
   affected_count integer;
   added_count integer := 0;
@@ -107,7 +106,6 @@ begin
     normalized_domain := regexp_replace(normalized_domain, '/+$', '');
     incoming_brand := nullif(btrim(import_row->>'brand'), '');
     incoming_manager := nullif(btrim(import_row->>'manager'), '');
-    incoming_source := nullif(btrim(import_row->>'source'), '');
 
     if normalized_domain = '' or length(normalized_domain) > 253 or normalized_domain ~ '[[:space:]/?#]' or normalized_domain !~ '\.' then
       raise exception 'Import contains an invalid domain.';
@@ -119,21 +117,19 @@ begin
     for update;
 
     if matched_id is null then
-      insert into public.domains (domain, brand, manager, source)
-      values (normalized_domain, incoming_brand, incoming_manager, incoming_source);
+      insert into public.domains (domain, brand, manager)
+      values (normalized_domain, incoming_brand, incoming_manager);
       added_count := added_count + 1;
     else
       update public.domains
       set domain = normalized_domain,
           brand = incoming_brand,
           manager = incoming_manager,
-          source = incoming_source,
           updated_at = now()
       where id = matched_id
         and (domain is distinct from normalized_domain
           or brand is distinct from incoming_brand
-          or manager is distinct from incoming_manager
-          or source is distinct from incoming_source);
+          or manager is distinct from incoming_manager);
       get diagnostics affected_count = row_count;
       if affected_count > 0 then
         updated_count := updated_count + 1;
